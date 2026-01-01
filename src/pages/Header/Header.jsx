@@ -28,20 +28,26 @@ export default function Header() {
 
   const navLinks = [
     { id: "home", icon: FaHome, text: "Home", path: "/" },
+    {
+      id: "education",
+      icon: FaGraduationCap,
+      text: "Education and Work experience",
+      path: "/education",
+    },
     { id: "skills", icon: FaCode, text: "Skills", path: "/skills" },
     {
+      id: "projects",
+      icon: FaLaptopCode,
+      text: "Projects",
+      path: "/projects",
+    },
+      /* TODO IMPORTANT Remove or Update experience section */
+          {
       id: "experience",
       icon: FaBriefcase,
       text: "Experience",
       path: "/experience",
     },
-    {
-      id: "education",
-      icon: FaGraduationCap,
-      text: "Education",
-      path: "/education",
-    },
-    //{ id: "projects", icon: FaLaptopCode, text: "Projects", path: "/projects" },
     { id: "contact", icon: FaEnvelope, text: "Contact", path: "/contact" },
   ];
 
@@ -55,7 +61,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <div className="flex justify-between items-center md:hidden px-2">
               <Link to="/" className="text-white font-bold">Portfolio</Link>
-              <button 
+              <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-white p-2"
               >
